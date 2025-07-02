@@ -1,0 +1,45 @@
+/*
+  Table component theme variables
+  Supports light, dark, and custom themes via CSS variables
+*/
+:root {
+  --table-bg: #fff;
+  --table-header-bg: #f8fafc;
+  --table-header: #22223b;
+  --table-border: #e5e7eb;
+  --table-row-alt: #f3f4f6;
+  --table-row-hover: #e0e7ff;
+  --table-cell: #22223b;
+  --table-muted: #6b7280;
+}
+
+[data-theme="dark"] {
+  --table-bg: #18181b;
+  --table-header-bg: #232336;
+  --table-header: #f3f4f6;
+  --table-border: #27272a;
+  --table-row-alt: #232336;
+  --table-row-hover: #312e81;
+  --table-cell: #f3f4f6;
+  --table-muted: #a1a1aa;
+}
+
+[data-theme="blue"] {
+  --table-bg: #e6f0ff;
+  --table-header-bg: #b3d1ff;
+  --table-header: #003366;
+  --table-border: #99bbdd;
+  --table-row-alt: #d6e6ff;
+  --table-row-hover: #cce0ff;
+  --table-cell: #003366;
+  --table-muted: #336699;
+}
+
+.bg-table-bg { background: var(--table-bg); }
+.bg-table-header-bg { background: var(--table-header-bg); }
+.text-table-header { color: var(--table-header); }
+.text-table-cell { color: var(--table-cell); }
+.text-table-muted { color: var(--table-muted); }
+.border-table-border { border-color: var(--table-border); }
+.bg-table-row-alt { background: var(--table-row-alt); }
+.hover\:bg-table-row-hover:hover { background: var(--table-row-hover); }
