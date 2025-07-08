@@ -3,6 +3,36 @@
 import React, { useState } from "react";
 import { Table, TableColumn } from "../components/ui/table/Table";
 import { ThemeSelector } from "../components/ui/ThemeSelector";
+import { Timeline, TimelineItem } from '../components/ui/timeline/Timeline';
+
+// Example usage:
+const newsItems: TimelineItem[] = [
+  {
+    id: '1',
+    date: 'July 8, 2025',
+    title: 'Major Market Movement',
+    content: 'The S&P 500 reached an all-time high today...'
+  },
+  {
+    id: '2',
+    date: 'July 7, 2025',
+    title: 'New Tech IPO',
+    content: 'A promising startup made its market debut A promising startup made its market debut A promising startup made its market debut A promising startup made its market debut A promising startup made its market debut A promising startup made its market debut A promising startup made its market debut '
+  },
+  {
+    id: '3',
+    date: 'July 9, 2025',
+    title: 'New Tech IPO',
+    content: 'A promising startup made its market debut...'
+  },
+  {
+    id: '4',
+    date: 'July 7, 2025',
+    title: 'New Tech IPO',
+    content: 'A promising startup made its market debut...'
+  }
+  // ... more items
+];
 
 // Sample data type
 interface Person {
@@ -68,6 +98,7 @@ export default function Home() {
         hoverable
         pageSize={5}
       />
+      <Timeline items={newsItems} className="transition-all" enableWidthControl />
     </main>
   );
 }
